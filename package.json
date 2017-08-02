@@ -1,6 +1,6 @@
 {
   "name": "simple-react-dnd",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "build/index.js",
   "repository": "https://github.com/lzgrzebski/simple-react-dnd.git",
   "author": "lzgrzebski <myczek18@gmail.com>",
