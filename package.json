@@ -1,8 +1,8 @@
 {
-  "name": "react-simple-dnd",
+  "name": "simple-react-dnd",
   "version": "1.0.0",
   "main": "build/index.js",
-  "repository": "https://github.com/lzgrzebski/react-simple-dnd.git",
+  "repository": "https://github.com/lzgrzebski/simple-react-dnd.git",
   "author": "lzgrzebski <myczek18@gmail.com>",
   "license": "MIT",
   "description": "Small react html5 drag and drop library created for fun.",
