@@ -1,0 +1,31 @@
+{
+  "name": "react-simple-dnd",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "https://github.com/lzgrzebski/react-simple-dnd.git",
+  "author": "lzgrzebski <myczek18@gmail.com>",
+  "license": "MIT",
+  "description": "Small react html5 drag and drop library created for fun.",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "reac": "0.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "scripts": {
+    "build": "babel src -d build",
+    "prepublish": "npm run build"
+  }
+}
