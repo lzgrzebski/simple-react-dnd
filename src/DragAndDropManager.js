@@ -7,7 +7,7 @@ export default class DragAndDropManager {
 
   setActive(activeProps) {
     this.active = activeProps;
-    this.subscriptions.forEach(subscription => subscription());
+    this.subscriptions.forEach(subscription => subscription.callback());
   }
 
   subscribe(callback) {
