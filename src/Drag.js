@@ -12,7 +12,7 @@ export default options => (
       }
 
       componentDidMount() {
-        this.context.dragDropManager.subscribe(() => this.forceUpdate());
+        this.subscriptionID = this.context.dragDropManager.subscribe(() => this.forceUpdate());
 
         this.node = findDOMNode(this);
         this.node.setAttribute('draggable', true);
@@ -24,6 +24,8 @@ export default options => (
       componentWillUnmount() {
         this.node.removeEventListener('dragstart', this.handleDragStart);
         this.node.removeEventListener('dragend', this.handleDragEnd);
+
+        this.context.dragDropManager.unsubscribe(this.subscriptionID);
       }
 
 
@@ -32,7 +34,7 @@ export default options => (
         dragDropManager.setActive(this.props);
 
         if (e.dataTransfer !== undefined) {
-          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.effectAllowed = 'move'; 
           e.dataTransfer.dropEffect = 'move';
           e.dataTransfer.setData('text', 'drag'); // firefox fix
         }

@@ -12,7 +12,7 @@ export default options => (
       }
 
       componentDidMount() {
-        this.context.dragDropManager.subscribe(() => this.forceUpdate());
+        this.subscriptionID = this.context.dragDropManager.subscribe(() => this.forceUpdate());
 
         this.node = findDOMNode(this);
 
@@ -25,6 +25,8 @@ export default options => (
         this.node.removeEventListener('drop', this.handleDrop);
         this.node.removeEventListener('dragend', this.handleDragEnd);
         this.node.removeEventListener('dragover', this.handleDragOver);
+
+        this.context.dragDropManager.unsubscribe(this.subscriptionID);
       }
 
       handleDragOver = (e) => {

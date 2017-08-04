@@ -2,6 +2,7 @@ export default class DragAndDropManager {
   constructor() {
     this.active = null;
     this.subscriptions = [];
+    this.id = -1;
   }
 
   setActive(activeProps) {
@@ -10,7 +11,17 @@ export default class DragAndDropManager {
   }
 
   subscribe(callback) {
-    this.subscriptions.push(callback);
+    this.id += 1;
+    this.subscriptions.push({
+      callback,
+      id: this.id,
+    });
+
+    return this.id;
+  }
+
+  unsubscribe(id) {
+    this.subscriptions = this.subscriptions.filter(sub => sub.id !== id);
   }
 
 }
