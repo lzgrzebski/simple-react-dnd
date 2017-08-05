@@ -1,5 +1,5 @@
 # simple-react-dnd
-**Example available here: http://clauderic.github.io/react-sortable-hoc/**
+**Example available here: https://lzgrzebski.github.io/react-kanban-flow/**
 
 > Small react html5 drag and drop library created for fun.
 > So not production ready if you have an ideas how to make it better please let 
@@ -101,3 +101,6 @@ Of course we can use them both in one component eg:
     Drop(optionsDrop)(Component)
   )
 ```
+
+### Working code example
+[https://github.com/lzgrzebski/react-kanban-flow/tree/with-simple-react-dnd](https://github.com/lzgrzebski/react-kanban-flow/tree/with-simple-react-dnd)
