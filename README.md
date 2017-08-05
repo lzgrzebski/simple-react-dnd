@@ -59,7 +59,7 @@ export default Drag(
     onDragStart: props => props.setActiveItem(props.id),
     onDragEnd: props => props.setActiveItem(null)
   }
-)(App);
+)(Item);
 
 ```
 
@@ -90,7 +90,7 @@ export default Drop(
     OnDragOver: (props, showAfter) => props.AddOpacityEffect(),
     onDrop: props => props.setActiveItem(null)
   }
-)(App);
+)(List);
 ```
 
 ### Mix drang and drop
