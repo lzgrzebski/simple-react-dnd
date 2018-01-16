@@ -93,7 +93,7 @@ export default Drop(
 )(List);
 ```
 
-### Mix drang and drop
+### Mix drag and drop
 Of course we can use them both in one component eg:
 
 ```js
